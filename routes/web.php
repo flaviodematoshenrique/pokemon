@@ -14,7 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function() {
+    return view ('welcome');
+});
+
+
 Route::get('/pokemon/{nome}', function($nome) {
-    echo "Você escolheu o pokemon: " .$nome;
+
+    return view ('welcome').$nome;
 });
 
